@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-screen flex flex-col">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto p-4">
+            <div>
+                <h1 class="w-16 cursor-pointer">Sample</h1>
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="Component/booking.html">Booking</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+    <!-- Main content -->
+    
+    <div class=" grid grid-cols-1 place-items-center pt-7">
+
+        <div class="bg-white" style="width: 30rem; height: 30rem; border-radius: 0.5rem;">
+        <div class="grid grid-cols-1 place-items-center pt-2">
+            <div>
+                <img src="../Images/profile.png" class="rounded-full">
+            </div>
+            <div class="text-center" >
+                <h2 class="mt-2"><b>BUSINESS OWNER</b></h2>
+                <p class="mt-2">I prioritize exceptional service and quality. Reach out for inquiries, partnerships, or feedback. Let's connect!</p>
+            </div>
+                <h2 class="mt-7">CONTACT US HERE:</h2>
+            <div class="bg-gray-100 p-6 mt-3 place-items-end">
+                <div class="flex space-x-4 ">
+                    <a href="https://www.facebook.com" target="_blank" class="flex items-center bg-blue-600 text-white p-2 pl-2.5 pr-2.5 rounded-full hover:bg-blue-700">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/your_number" target="_blank" class="flex items-center bg-green-600 text-white p-2 rounded-full hover:bg-green-700">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="flex items-center bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700">
+                    <i class="fab fa-instagram"></i> 
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="flex items-center bg-blue-400 text-white p-2 rounded-full hover:bg-blue-500">
+                    <i class="fab fa-twitter"></i> 
+                    </a>
+                    <a href="mailto:your_email@example.com" class="flex items-center bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700">
+                    <i class="fas fa-envelope"></i> 
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        &copy; copyright 2024 by ReCkY
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
+</html>
